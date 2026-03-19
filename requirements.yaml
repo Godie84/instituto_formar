@@ -1,0 +1,20 @@
+packages:
+  "framer-motion": "For page transitions and scroll-triggered animations to add visual polish"
+  "react-hook-form": "For managing the enrollment form state"
+  "@hookform/resolvers": "For integrating Zod validation with react-hook-form"
+  "zod": "For strongly typed form validation"
+
+images:
+  - path: "artifacts/instituto-formar/public/images/logo.png"
+    description: "Minimalist, professional logo for an educational institute named 'Instituto Técnico Formar'. Features a subtle combination of a graduation cap and a mechanical gear to represent technical education. Colors: dark green and gold. Transparent background, high quality."
+    aspect_ratio: "1:1"
+  - path: "artifacts/instituto-formar/public/images/hero-bg.png"
+    description: "Abstract modern background with subtle dark green and gold gradients, geometric shapes, representing technology and education. Professional, clean, and trustworthy vibe with a dark aesthetic to allow white text to overlay."
+    aspect_ratio: "16:9"
+  - path: "artifacts/instituto-formar/public/images/pattern-dots.png"
+    description: "Subtle dotted geometric pattern in light gray, to be used as a background texture for web sections. Clean and academic."
+    aspect_ratio: "1:1"
+
+notes:
+  - Mocking backend API calls with timeouts since this is a frontend-only design implementation.
+  - Using wouter for routing.
