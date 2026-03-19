@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,18 +9,12 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3 inline-block">
-              <div className="bg-primary/20 p-2 rounded-xl text-accent border border-primary/30">
-                <GraduationCap size={24} strokeWidth={2} />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs font-bold tracking-widest leading-none text-white/60">
-                  INSTITUTO TÉCNICO
-                </span>
-                <span className="text-xl font-display font-black leading-none text-white">
-                  FORMAR
-                </span>
-              </div>
+            <Link href="/" className="inline-block">
+              <img
+                src={`${import.meta.env.BASE_URL}images/logo-itf.png`}
+                alt="Instituto Técnico Formar"
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-sm mt-4 leading-relaxed">
               Formando profesionales competentes y comprometidos con el desarrollo productivo y social desde hace más de 15 años.
