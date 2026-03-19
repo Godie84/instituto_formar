@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+
+  /* Paleta institucional Instituto Técnico Formar */
+  /* --verde-oscuro: #1B5E20; */
+  /* --verde-brillante: #43A047; */
+  /* --dorado-intenso: #FFC107; */
+  /* --gris-oscuro: #212121; */
+  /* --gris-claro: #F5F5F5; */
+
+  --color-background: hsl(0 0% 96%); /* #F5F5F5 */
+  --color-foreground: hsl(0 0% 13%); /* #212121 */
+  
+  --color-primary: hsl(125 55% 24%); /* #1B5E20 */
+  --color-primary-foreground: hsl(0 0% 100%);
+  
+  --color-secondary: hsl(123 41% 45%); /* #43A047 */
+  --color-secondary-foreground: hsl(0 0% 100%);
+  
+  --color-accent: hsl(45 100% 51%); /* #FFC107 */
+  --color-accent-foreground: hsl(125 55% 24%); /* Dark green text on gold for contrast */
+  
+  --color-muted: hsl(0 0% 88%);
+  --color-muted-foreground: hsl(0 0% 40%);
+  
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 13%);
+  
+  --color-border: hsl(0 0% 85%);
+  --color-input: hsl(0 0% 85%);
+  --color-ring: hsl(125 55% 24%);
+}
+
+:root {
+  --background: 0 0% 96%;
+  --foreground: 0 0% 13%;
+  --primary: 125 55% 24%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 123 41% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 45 100% 51%;
+  --accent-foreground: 125 55% 24%;
+  --muted: 0 0% 88%;
+  --muted-foreground: 0 0% 40%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 13%;
+  --border: 0 0% 85%;
+  --ring: 125 55% 24%;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-accent selection:text-accent-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-white/90 backdrop-blur-md border-b border-border/50 supports-[backdrop-filter]:bg-white/60;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary;
+  }
+}
