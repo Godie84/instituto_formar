@@ -30,7 +30,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav py-3 shadow-sm" : "bg-transparent py-5"
+        isScrolled ? "glass-nav py-1 shadow-sm" : "bg-transparent py-2"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +40,7 @@ export function Navbar() {
             <img
               src={`${import.meta.env.BASE_URL}images/logo-itf.png`}
               alt="Instituto Técnico Formar"
-              className={`h-16 w-auto object-contain group-hover:scale-105 transition-all duration-300 ${
+              className={`h-24 md:h-28 w-auto max-w-[380px] object-contain group-hover:scale-105 transition-all duration-300 ${
                 isScrolled || location !== "/" ? "" : "brightness-0 invert"
               }`}
             />
